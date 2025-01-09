@@ -1,0 +1,79 @@
+@use "../../scss/libs/mixins" as *;
+@use "../../scss/variables" as *;
+
+.header {
+  @media (max-width: $mobileL) {
+    padding: 50px 15px 0 15px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    border-radius: 0 0 0 60px;
+    background-color: $mobileHeaderColor;
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      background-color: #f2f2f2;
+      border-radius: 50%;
+    }
+    & > h1 {
+      white-space: pre-wrap;
+      width: 55%;
+      margin-top: 45px;
+      color: #3f3f3f;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    & > p {
+      margin-left: 10px;
+      color: #3f3f3f;
+      font-weight: 500;
+      //font-size: 15px;
+    }
+  }
+}
+
+.form {
+  @media (max-width: $mobileL) {
+    margin: 50px 0;
+    .form--sing {
+      display: flex;
+      flex-direction: column;
+      //position: relative;
+      margin: 1em;
+
+      .email--input {
+        @include input;
+      }
+
+      .password--input {
+        padding-left: 5px;
+        border: 1px solid;
+        border-radius: 3px;
+        margin: 20px 0;
+        height: 3em;
+        display: block;
+        width: 100%;
+        line-height: 3em;
+        //padding: 0 1.5em;
+      }
+
+      .password--show {
+        cursor: pointer;
+        width: 2rem;
+        position: absolute;
+        top: 1.4em;
+        right: 0.4em;
+        height: 2.2em;
+      }
+
+      & > button {
+        @include normalButton;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}

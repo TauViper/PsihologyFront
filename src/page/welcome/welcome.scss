@@ -1,0 +1,28 @@
+@use '../../scss/libs/mixins' as *;
+@use "../../scss/variables" as *;
+
+.checkbox {
+  @media (max-width: $tablet) and (min-width: $mobileS) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .checkbox--input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkbox--text {
+    margin-left: 10px;
+  }
+}
+
+.checkbox--link {
+  @media (max-width: $tablet) and (min-width: $mobileS) {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+}

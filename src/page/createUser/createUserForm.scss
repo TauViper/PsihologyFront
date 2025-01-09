@@ -1,0 +1,32 @@
+@use "../../scss/variables" as *;
+@use "../../scss/libs/mixins" as *;
+
+@media (max-width: $mobileL) {
+  .create {
+    margin: 50px 0 0 0 !important;
+  }
+
+  .create--user--input {
+    @include input;
+    margin: 5px 0 !important;
+  }
+
+  .create--confirm--input {
+    @include input;
+    margin: 5px 0 25px 0 !important;
+
+  }
+
+  .create--links {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+
+    & > a {
+      text-decoration: none;
+      color: $normalButtonColor;
+
+    }
+  }
+
+}

@@ -1,0 +1,77 @@
+@use "../../scss/variables" as *;
+@use "../../scss/libs/mixins" as *;
+
+.main--background {
+  @media (max-width: $mobileL) {
+    background-image: url('mainBackground.jpg');
+    //height: 767px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    .main {
+      flex: 1 0 auto;
+    }
+
+    .main--span {
+      display: flex;
+      padding: 4rem 2rem 0 2rem;
+      color: $normalTextColor;
+      font-weight: 100;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+    .main--h1 {
+      line-height: 35px;
+      display: flex;
+      padding: 10rem 2rem 0 2rem;
+      color: $normalTextColor;
+      font-size: 1.5rem;
+      flex-wrap: wrap;
+      white-space: pre-wrap;
+      font-weight: $fontWeight500;
+    }
+    .main--footer {
+      flex: 0 0 auto !important;
+    }
+    .main--div {
+      //display: flex;
+      //margin-top: 80px;
+      //min-height: calc(100vh - 80px);
+      //position: sticky;
+      //bottom: 0;
+      flex-direction: column;
+      height: 200px;
+      border-radius: 0 60px 0 0;
+      background-color: #E5E1DE;
+
+      .main--footerSpan {
+        display: flex;
+        padding: 1rem 0 0 1rem;
+
+      }
+
+      & > button {
+        @include normalButton
+      }
+
+      .main--socialIcons {
+        cursor: pointer;
+        margin: 12px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 40px);
+        align-items: start;
+      }
+
+      .main--createAccount {
+        display: flex;
+        justify-content: space-between;
+        width: 210px;
+        cursor: pointer;
+      }
+    }
+  }
+}

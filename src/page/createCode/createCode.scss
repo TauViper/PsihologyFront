@@ -1,0 +1,46 @@
+@use "../../scss/variables" as *;
+@use "../../scss/libs/mixins" as *;
+
+.container {
+  @media (max-width: $mobileL) {
+    .verificationInput {
+      width: 35px;
+      height: 29px;
+      flex-grow: 0;
+      line-height: 85%;
+      flex-basis: 25px;
+      margin: 5px;
+
+      &--filled {
+        padding: 5px;
+        font-size: 20px;
+      }
+    }
+
+    .create--code--span {
+      display: block;
+      font-size: 20px;
+      font-weight: 500;
+      margin-left: 25px !important;
+      margin-top: 25px !important;
+    }
+
+    .create--code--span2 {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 10px 0 5px 25px !important;
+    }
+
+    .verification--pin {
+      margin-left: 20px !important;
+    }
+    & > button {
+      @include normalButton;
+
+      &:disabled {
+        @include disabledButton;
+      }
+    }
+  }
+}

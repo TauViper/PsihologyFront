@@ -1,0 +1,32 @@
+@use '../../scss/variables' as *;
+
+.verificationInput {
+  @media (max-width: $mobileL) {
+    width: 35px;
+    height: 29px;
+    flex-grow: 0;
+    line-height: 85%;
+    flex-basis: 25px;
+    margin: 5px;
+
+    &--filled {
+      padding: 5px;
+      font-size: 20px;
+    }
+  }
+}
+
+.verification--span {
+  @media (max-width: $mobileL) {
+    display: block;
+    font-size: 20px;
+    margin-left: 25px !important;
+    margin-top: 45px !important;
+  }
+}
+
+.verification--pin {
+  @media (max-width: $mobileL) {
+    margin-left: 20px !important;
+  }
+}

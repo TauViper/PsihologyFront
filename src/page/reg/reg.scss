@@ -1,0 +1,84 @@
+@use '../../scss/libs/mixins' as *;
+@use "../../scss/variables" as *;
+
+
+.wrapper--centerImg {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 110px;
+  grid-template-areas:
+    ". a a ."
+    ". a a .";
+
+}
+
+.proppeler {
+  animation: 70s linear infinite rotate;
+  @media (max-width: $mobileL) {
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+    width: 8rem;
+    height: 8rem;
+  }
+
+}
+
+.title--reg {
+  @media (max-width: $mobileL) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+.social--center {
+  @media (max-width: $mobileL) {
+    margin-top: 40px;
+    grid-area: a;
+    align-self: center;
+    //justify-self: center;
+    .social {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 4rem);
+      grid-template-areas:
+    ". a a .";
+      justify-content: center;
+    }
+
+    .social_button {
+      height: 32px;
+      padding: 0;
+      border: 0;
+      background-color: white;
+
+      :hover {
+        //-moz-transform: scale(1.2);
+        //-webkit-transform: scale(1.2);
+        //-o-transform: scale(1.2);
+        //-ms-transform: scale(1.2);
+        transition-duration: 580ms, 580ms;
+        transform: scale(1.2);
+        fill: white;
+        //transform: perspective(100px) rotateY(180deg);
+      }
+
+      img {
+        height: 32px;
+        width: 32px;
+      }
+    }
+    & > span {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    & > button {
+      @include normalButton
+    }
+  }
+}
+

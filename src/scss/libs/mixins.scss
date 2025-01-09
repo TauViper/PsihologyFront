@@ -1,0 +1,64 @@
+@use "../variables" as *;
+
+@mixin normalButton {
+  cursor: pointer;
+  height: 37px;
+  width: 95%;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: $normalButtonColor;
+  color: #FFFFFF;
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $hoverButtonColor;
+  }
+}
+
+@mixin disabledButton {
+  height: 37px;
+  width: 95%;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: $disabledButtonColor;
+  color: $normalTextColor;
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $disabledButtonColor;
+    cursor: not-allowed;
+  }
+}
+
+@mixin addButton {
+  cursor: pointer;
+  display: flex;
+  width: 150px;
+  height: 50px;
+  border: none;
+  margin: 15px auto;
+  border-radius: 100px;
+  background: rgb(63, 33, 140);
+  background: linear-gradient(90deg, rgba(63, 33, 140, 0.9641106442577031) 35%, rgba(90, 24, 148, 1) 100%);
+  &:active {
+    background: linear-gradient(90deg, rgba(63, 33, 140, 0.9641106442577031) 35%, rgba(90, 24, 148, 1) 100%);
+    width: 145px;
+    height: 45px;
+  }
+}
+
+@mixin input {
+  padding-left: 5px;
+  border: 1px solid;
+  border-radius: 3px;
+  margin: 20px 0;
+  height: 3em;
+}

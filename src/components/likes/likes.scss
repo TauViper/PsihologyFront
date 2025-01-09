@@ -1,0 +1,64 @@
+@use '../../scss/libs/mixins' as *;
+@use '../../scss/variables' as *;
+
+.likes {
+  @media (max-width: $tablet) and (min-width: $mobileS) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    & > span {
+      padding-left: 15px;
+    }
+    & > ul {
+      display: flex;
+
+      & > li {
+        &:not(:last-child) {
+          margin-right: -15px;
+        }
+      }
+    }
+
+    .likes--img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+    .icon {
+      position: absolute;
+      right: 25px;
+      width: 25px;
+      height: 25px;
+    }
+    &--points {
+      margin-bottom: 25px;
+      padding: 0 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 2fr;
+      grid-template-rows: 0.5fr;
+      gap: 0 0;
+      grid-template-areas:
+    "heart chat send show";
+
+      .heart {
+        grid-area: heart;
+      }
+
+      .chat {
+        grid-area: chat;
+      }
+
+      .send {
+        grid-area: send;
+      }
+
+      .show {
+        padding-right: 15px;
+        justify-self: end;
+        grid-area: show;
+      }
+    }
+
+  }
+}

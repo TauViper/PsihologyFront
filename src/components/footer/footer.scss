@@ -1,0 +1,48 @@
+@use '../../scss/libs/mixins' as *;
+@use '../../scss/variables' as *;
+
+.footer {
+  @media (max-width: $tablet) and (min-width: $mobileS) {
+    position: sticky;
+    bottom: 0;
+    background-color: $normalButtonColor;
+    border-radius: 0 50px 0 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 50px 0 50px;
+  }
+
+  &--buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr;
+    gap: 0 35px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "home users heartPulse chats user";
+
+    .home {
+      grid-area: home;
+    }
+
+    .users {
+      grid-area: users;
+    }
+
+    .heartPulse {
+      grid-area: heartPulse;
+    }
+
+    .chats {
+      grid-area: chats;
+    }
+
+    .user {
+      grid-area: user;
+    }
+  }
+
+}
